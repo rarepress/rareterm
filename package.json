@@ -1,6 +1,6 @@
 {
   "name": "rareterm",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "rarepress HTTP client for browsers",
   "main": "index.js",
   "author": "skogard@protonmail.com",

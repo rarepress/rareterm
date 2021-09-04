@@ -94,9 +94,10 @@
   class Token extends Thing {
     async init() {
       const timestamp = Date.now()  // 13 digits
-      const rand = Math.floor(10**11 * Math.random()) // 11 digits
+      const rand = (Math.random() * Math.pow(10, 14)).toString().slice(0,11); // 11 digits
       const base = "" + timestamp + rand // 24 digits
-      return BigInt(this.account + base).toString(10)
+      let bi = BigInt(creator + base)
+      return bi.toString(10)
     }
     async build (body) {
       if (!body.tokenId) {
